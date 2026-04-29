@@ -1,0 +1,14 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="chart"></canvas>
+
+<script>
+let scores = {{ scores | tojson }};
+
+new Chart(document.getElementById("chart"), {
+type: "line",
+data: {
+labels: scores.map((_,i)=>"Test "+(i+1)),
+datasets: [{data: scores}]
+}
+});
+</script>

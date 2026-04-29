@@ -1,0 +1,21 @@
+<form action="/predict" method="post">
+
+<h3>GAD-7</h3>
+{% for i in range(7) %}
+<input type="number" name="gad{{i}}" min="0" max="3"><br>
+{% endfor %}
+
+<h3>PHQ-9</h3>
+{% for i in range(9) %}
+<input type="number" name="phq{{i}}" min="0" max="3"><br>
+{% endfor %}
+
+<input name="sleep" placeholder="Sleep"><br>
+<input name="screen" placeholder="Screen"><br>
+<input name="exercise" placeholder="Exercise"><br>
+
+<button>Submit</button>
+</form>
+
+<a href="/history">History</a>
+<a href="/logout">Logout</a>
